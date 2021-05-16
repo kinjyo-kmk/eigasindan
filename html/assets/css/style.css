@@ -6,10 +6,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  background:rgba(200,200,200,.5);
-}
-
 .content-wrap {
   position: absolute;
   top: 50%;
@@ -29,12 +25,32 @@ body {
   justify-content: center;
 }
 
-.btn {
-  display: block;
+.btn-wrap .btn:first-of-type {
+  margin-right: 20px;
 }
 
-.btn:first-of-type {
-  margin-right: 15px;
+.btn {
+  width: 250px;
+  padding: 6px 0 10px;
+  font-size: 2.4rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transform: .3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: .3s;
+}
+
+.btn.choice-a {
+  background: #f00;
+}
+
+.btn.choice-b {
+  background: #00f;
 }
 
 /* ----- 質問 ----- */
@@ -46,12 +62,55 @@ body {
 
 .question .text-wrap {
   width: 400px;
-  padding: 10px;
+  padding: 20px;
   position: relative;
+  background: rgb(255, 202, 202);
 }
 
 /* ----- 回答 ----- */
 .answer {
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 20px;
+  background: #ccc;
+}
+
+/* ----- ポップアップ ----- */
+.popup-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.popup-wrap.js-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-inner {
+  width: 650px;
+  padding: 20px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-title {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+}
+
+.popup-btn {
+  margin: 20px auto 0;
+  color: #000;
+  background: rgb(169, 255, 248);
+  cursor: pointer;
 }
