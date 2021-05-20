@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../assets/css/style.css"> </head>
 <body>
   <main>
-    <div class="content-wrap">
+    <div id="content01" class="content-wrap js-active">
       <div class="question">
         <div class="text-wrap">
           <p class="text">鹿肉よりも牛肉の方が好き？</p>
@@ -21,8 +21,42 @@
         <p class="text">A:鹿肉</p>
         <p class="text">B:牛肉</p>
         <div class="btn-wrap">
-          <a class="btn choice-a" href="#">A</a>
-          <a class="btn choice-b" href="#">B</a>
+          <a class="btn js-choice choice-a" href="#content02">A</a>
+          <a class="btn js-choice choice-b" href="#content03">B</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content02" class="content-wrap">
+      <div class="question">
+        <div class="text-wrap">
+          <p class="text">どっちのジャンルが好み？</p>
+        </div>
+        <img src="https://placehold.jp/300x300.png" alt="">
+      </div>
+      <div class="answer">
+        <p class="text">A:アクション</p>
+        <p class="text">B:ファンタジー</p>
+        <div class="btn-wrap">
+          <a class="btn js-choice choice-a" href="#">A</a>
+          <a class="btn js-choice choice-b" href="#">B</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content03" class="content-wrap">
+      <div class="question">
+        <div class="text-wrap">
+          <p class="text">なんてこった！</p>
+        </div>
+        <img src="https://placehold.jp/300x300.png" alt="">
+      </div>
+      <div class="answer">
+        <p class="text">A:死んでしまった！</p>
+        <p class="text">B:フラれてしまった！</p>
+        <div class="btn-wrap">
+          <a class="btn js-choice choice-a" href="#">A</a>
+          <a class="btn js-choice choice-b" href="#">B</a>
         </div>
       </div>
     </div>
@@ -37,6 +71,7 @@
     </div>
     <!-- 初回アクセスのみポップアップ -->
   </main>
+  <!-- <script src="../assets/js/text.js"></script> -->
   <script src="../assets/js/script.js"></script>
 </body>
 </html>
